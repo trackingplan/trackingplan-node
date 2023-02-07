@@ -1,0 +1,16 @@
+{
+  "name": "trackingplan-node-sdk",
+  "version": "0.1.0",
+  "description": "Trackingplan for Node SDK",
+  "main": "trackingplan.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Padilla",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@mswjs/interceptors": "^0.19.4",
+    "localStorage": "^1.0.4",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
