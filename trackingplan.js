@@ -293,12 +293,12 @@ function contentFilterRequest(request, contentFilters) {
     if (contentFilters.length === 0) return true;
 
     for (var i = 0; i < contentFilters.length; i++) {
-        if (has(request, 'payload') && typeof request['payload'] === 'string') {
+        if (has.call(request, 'payload') && typeof request['payload'] === 'string') {
             if (request['payload'].indexOf(contentFilters[i]) >= 0) {
                 return true;
             }
         }
-        if (has(request, 'endpoint') && typeof request['endpoint'] === 'string') {
+        if (has.call(request, 'endpoint') && typeof request['endpoint'] === 'string') {
             if (request['endpoint'].indexOf(contentFilters[i]) >= 0) {
                 return true;
             }
@@ -310,7 +310,7 @@ function contentFilterRequest(request, contentFilters) {
 
 function isValidProvider(provider) {
     if (_providersWhitelist !== null) {
-        return _providersWhitelist.includes(provider);
+        return (_providersWhitelist.indexOf(provider) >= 0);
     }
     return true;
 }
