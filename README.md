@@ -20,7 +20,7 @@ Installing Trackingplan is simple. Among others, we support the following method
 
 
 Once our library is included:
-1) Import it with `import Trackingplan from '@trackingplan/node`
+1) Import it with `import Trackingplan from '@trackingplan/node'`
 2) Initialize it with `Trackingplan.init("YOUR_TP_ID", {"environment": "PRODUCTION"})` to start monitoring. See options below.
 
 Note that the `init` call above should show your personal Trackingplan ID. Please replace `YOUR_TP_ID` with your personal Trackingplan ID which you will find in your plan's settings page.
@@ -51,14 +51,13 @@ The `init` call can also receive an `options` dictionary, that allows you to set
 
 | Parameter     | Description                                                                                                                                                                                                                                                                             | Default value | Example                        |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------|
-
 | `debug`         | Shows Trackingplan debugging information in the console | `false` | `true` |
 | `dryRun` | Combined with `debug` allows you to debug Trackingplan without sendind data to its servers | `false` | `true` |
 | `environment`   | Allows to isolate the data between production and other environments | `PRODUCTION`  | `DEV` |
 | `sourceAlias`   | Allows to differentiate between sources | `node` | `IOS App` |
 | `tags`         | Allows to classify the traffic and warnings detected | {} | `{"appVersion": "12.4"}` |
 | `customDomains` | Allows to extend the list of monitored domains. Any request made to these domains will also be forwarded to Trackingplan. The format is `{"myAnalyticsDomain.com": "myAnalytics"}`, where you put, respectively, the domain to be looked for and the alias you want to use for that analytics domain. | `{}`            | `{"mixpanel.com": "Mixpanel"}` |
-| `providersWhitelist` | If used, only specified analytics providers with be monitored.  |`["amplitude", "bing", "chartbeat", "customerio", "facebook", "heap", "hotjar", "hubspot", "intercom", "klaviyo", "kissmetrics", "linkedin", "matomo", "mixpanel", "optimizely", "pinterest", "podsights", "reddit", "segment", "snowplow", "tiktok", "twitter", "googleanalytics"]` | `['segment', 'googleanalytics']` |
+| `providersWhitelist` | If used, only specified analytics providers with be monitored.  | `["amplitude", "bing", "chartbeat", "customerio", "facebook", "heap", "hotjar", "hubspot", "intercom", "klaviyo", "kissmetrics", "linkedin", "matomo", "mixpanel", "optimizely", "pinterest", "podsights", "reddit", "segment", "snowplow", "tiktok", "twitter", "googleanalytics"]` | `['segment', 'googleanalytics']` |
 | `contentFilters`         | If used, only payloads or endpoints that include any of the passed texts will be monitored | null | `["test.com", "GTM12345678"]` |
 
 

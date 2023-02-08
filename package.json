@@ -1,6 +1,6 @@
 {
   "name": "@trackingplan/node",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Official Trackingplan SDK for Node.js",
   "main": "trackingplan.js",
   "scripts": {},
