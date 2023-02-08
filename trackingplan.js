@@ -179,7 +179,7 @@ const Trackingplan = {
      *      batchSize: 512000,
      *      batchInterval: 20,
      *      dryRun: false,
-     *      intercept: ['mws'],
+     *      intercept: ['msw'],
      *      tags: {},
      *      contentFilters: [],
      *      providersWhitelist: null,
