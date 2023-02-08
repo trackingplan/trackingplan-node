@@ -217,6 +217,7 @@ const Trackingplan = {
     },
 
     stop: function () {
+        debugLog("Stopping Trackingplan")
         if (_intervalId !== null) {
             clearInterval(_intervalId);
             _intervalId = null;
@@ -226,8 +227,7 @@ const Trackingplan = {
             _interceptor.dispose()
             _interceptor = null;
         }
-        debugLog("Stopping Trackingplan")
-
+        _tpId = null;
     },
 
     flush: function () {
