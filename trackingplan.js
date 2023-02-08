@@ -160,8 +160,8 @@ var _interceptor = null;
 
 const Trackingplan = {
 
-    sdk: "nodejs",
-    sdkVersion: "1.0.3",
+    sdk: "node",
+    sdkVersion: "1.0.4",
 
     /**
      * Default options:
@@ -231,7 +231,7 @@ const Trackingplan = {
     },
 
     flush: function () {
-        debugLog.log("flushing");
+        debugLog("Flushing all pending data");
         sendBatch("xhr");
     },
 
@@ -266,7 +266,6 @@ function installInterceptors() {
 }
 
 function installMswInterceptor() {
-    console.log("installing msw interceptor");
     if (_interceptor !== null) return;
 
     _interceptor = new BatchInterceptor({
@@ -310,8 +309,6 @@ function contentFilterRequest(request, contentFilters) {
 }
 
 function isValidProvider(provider) {
-    console.log(provider);
-    console.log(_providersWhitelist)
     if (_providersWhitelist !== null) {
         return _providersWhitelist.includes(provider);
     }
