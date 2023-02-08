@@ -161,7 +161,7 @@ var _interceptor = null;
 const Trackingplan = {
 
     sdk: "nodejs",
-    sdkVersion: "1.0.0",
+    sdkVersion: "1.0.3",
 
     /**
      * Default options:
